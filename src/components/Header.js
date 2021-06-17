@@ -12,6 +12,7 @@ Header.defaultProps = {
     title: "Task",
 }
 Header.propTypes = {
+    title: PropTypes.string,
     //use .isRequired to make the prop required
 }
 export default Header;
