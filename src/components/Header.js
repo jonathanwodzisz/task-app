@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Button from './Button'
 
+function addBtn() {
+    console.log("clicked");
+}
 function Header({ title }) {
     return (
-        <header>
+        <header className="header">
             <h1 /*css in jsx use style{{properties in here}}*/>{title}</h1>
+            <Button text="Add" color="red" onClick={addBtn} />
         </header>
     )
 }
