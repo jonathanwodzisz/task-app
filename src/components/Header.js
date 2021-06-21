@@ -9,7 +9,7 @@ function Header({ title }) {
     return (
         <header className="header">
             <h1 /*css in jsx use style{{properties in here}}*/>{title}</h1>
-            <Button text="Add" color="red" onClick={addBtn} />
+            <Button text="Add" color="green" onClick={addBtn} />
         </header>
     )
 }
