@@ -9,13 +9,13 @@ function App() {
       {
         id: 1,
         text: 'Doctors Appointment',
-        day: 'Feb 5th at 2:30om',
+        day: 'Feb 5th at 2:30pm',
         reminder: true,
       },
       {
         id: 2,
         text: 'School',
-        day: 'Feb 6th at 1:30om',
+        day: 'Feb 6th at 1:30pm',
         reminder: true,
       },
       {
@@ -25,10 +25,14 @@ function App() {
         reminder: false,
       }
     ])
+  //Delete Task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
   return (
     <div className="container">
       <Header title="Task" />
-      <Tasks tasks={tasks} />
+      {tasks.length > 0 ? <Tasks onDelete={deleteTask} tasks={tasks} /> : 'No Tasks Yet'}
     </div>
   );
 }

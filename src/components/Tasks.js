@@ -1,11 +1,11 @@
 import React from 'react'
 import Task from './Task.js'
 
-function Tasks({ tasks }) {
+function Tasks({ tasks, onDelete }) {
 
     return (
         <>
-            {tasks.map((task) => (<Task key={task.id} task={task} />))}
+            {tasks.map((task) => (<Task key={task.id} task={task} onDelete={onDelete} />))}
         </>
     )
 }
