@@ -2,14 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
 
-function addBtn() {
-    console.log("clicked");
-}
-function Header({ title }) {
+function Header({ title, onAdd, showAdd }) {
     return (
         <header className="header">
             <h1 /*css in jsx use style{{properties in here}}*/>{title}</h1>
-            <Button text="Add" color="green" onClick={addBtn} />
+            <Button text={showAdd ? 'close' : "Add"} color={showAdd ? "red" : "green"} onClick={onAdd} />
         </header>
     )
 }
